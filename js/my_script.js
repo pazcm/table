@@ -7,3 +7,11 @@ $(document).ready(function(){
   $("tr:even").addClass("selection-even");
 });
 
+//when a table header is clicked, the corresponding row should highlight
+
+$(document).ready(function(){
+    $("th").click(function(){
+        $("tr").children().removeClass("selection")
+    	$(this).siblings().addClass("selection");
+    })
+});
